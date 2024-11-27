@@ -68,4 +68,26 @@ go build <file_name.go>
 go run <file_name.go>
 ```
 
+## Get the list of suppported platforms
+```shell
+go tool dist list
+```
+
+## Get the env variables & values
+```shell
+go env
+```
+```shell
+go env <var_1> <var_2>
+```
+
+## Env variables for cross compilation
+- GOOS
+- GOARCH
+
+## Cross compilation
+```shell
+GOOS=windows GOARCH=amd64 go build 01-hello-world.go
+```
+
 

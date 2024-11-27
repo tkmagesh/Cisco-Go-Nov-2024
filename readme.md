@@ -150,3 +150,8 @@ GOOS=windows GOARCH=amd64 go build 01-hello-world.go
         - cannot have names
         - can be declared in another function
         - must be immediately executed
+    - Higher Order Functions
+        - functions can be treated like data
+        - functions can be assigned to variables
+        - functions can be passed as arguments
+        - functions can be returned as return values

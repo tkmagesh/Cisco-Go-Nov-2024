@@ -54,4 +54,18 @@
     - Less startup time
     - One build per deployment platform
     - Builtin support for cross compilation
-    
+
+## Standard Library Docs 
+- https://pkg.go.dev/std 
+
+## Compilation
+```shell
+go build <file_name.go>
+```
+
+## Compile & Execute
+```shell
+go run <file_name.go>
+```
+
+

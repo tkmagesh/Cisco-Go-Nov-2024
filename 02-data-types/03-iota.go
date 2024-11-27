@@ -54,25 +54,24 @@ func main() {
 
 	// Mimicking Unix file permissions
 
-	/*
-		const (
-			X = iota << 1
-			W
-			R
-		)
-
-		fmt.Println(X, W, R)
-		fmt.Printf("%b %b %b\n", X, W, R)
-	*/
-
 	const (
-		X = 1 << iota
+		X = iota << 1
 		W
 		R
-		XW  = X | W
-		WR  = W | R
-		XWR = X | W | R
 	)
-	fmt.Printf("%b %b %b %b %b %b\n", X, W, XW, R, WR, XWR)
 
+	fmt.Println(X, W, R)
+	fmt.Printf("%b %b %b\n", X, W, R)
+
+	/*
+		const (
+			X = 1 << iota
+			W
+			R
+			XW  = X | W
+			WR  = W | R
+			XWR = X | W | R
+		)
+		fmt.Printf("%b %b %b %b %b %b\n", X, W, XW, R, WR, XWR)
+	*/
 }

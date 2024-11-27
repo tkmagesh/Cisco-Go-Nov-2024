@@ -142,3 +142,11 @@ GOOS=windows GOARCH=amd64 go build 01-hello-world.go
 ### if else
 ### switch case
 ### for
+
+## Functions
+    - functions can have more than one return results
+        - named results
+    - anonymous functions
+        - cannot have names
+        - can be declared in another function
+        - must be immediately executed

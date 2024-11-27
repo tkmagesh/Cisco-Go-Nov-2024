@@ -35,7 +35,7 @@ func main() {
 	fmt.Println(s)
 
 	var getNames func(string) (string, string)
-	getNames = func(fullName string) (firstName string, lastName string) {
+	getNames = func(fullName string) (firstName, lastName string) {
 		names := strings.Split(fullName, " ")
 		firstName = names[0]
 		lastName = names[1]
@@ -43,4 +43,12 @@ func main() {
 	}
 	fn, ln := getNames("Magesh Kuppan")
 	fmt.Printf("First Name : %q, Last Name : %q\n", fn, ln)
+
+	var f func()
+	f = f1
+	f()
+}
+
+func f1() {
+	fmt.Println("f1 invoked")
 }

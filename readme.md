@@ -137,3 +137,8 @@ GOOS=windows GOARCH=amd64 go build 01-hello-world.go
 ### Package Scope
 - Cannot use ":="
 - CAN have unused variables
+
+## Constructs
+### if else
+### switch case
+### for

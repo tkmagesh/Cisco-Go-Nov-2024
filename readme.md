@@ -184,3 +184,59 @@ GOOS=windows GOARCH=amd64 go build 01-hello-world.go
 - functions
     - panic
     - recover
+
+## Modules & Packages
+### Module
+- Any code that has to be versioned & deployed together
+- Any folder that has the go.mod file
+- go.mod file
+    - manifest file for the module
+        - module name
+            - advisable to have the complete repo path as the module name
+        - go runtime version
+        - dependencies
+#### Create a go.mod file
+```shell
+go mod init <module_name>
+```
+
+#### run a module
+```shell
+go run .
+```
+
+#### Create a build of a module
+```shell
+go build .
+go build -o <output_file_name> .
+```
+
+#### Installing a 3rd party module
+[ By default, the code is downloaded into the GOPATH/pkg folder ]
+```shell
+go get <module_name>
+```
+
+#### to update a dependency
+```shell
+go get -u <module_name>
+```
+
+#### Updating the references in go.mod file
+```shell
+go mod tidy
+```
+
+#### Download the dependencies documented in the go.mod file
+```shell
+go mod download
+```
+
+#### To localize the dependencies into a local "vendor" folder
+```shell
+go mod vendor
+```
+
+### Package
+- Internal organization of a module
+- typically a folder

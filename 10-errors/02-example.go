@@ -5,8 +5,8 @@ import (
 	"fmt"
 )
 
-var ErrF1 = errors.New("f1 error")
-var ErrF2 = errors.New("f2 error")
+var ErrF1 error = errors.New("f1 error")
+var ErrF2 error = errors.New("f2 error")
 
 func main() {
 	err := f1()

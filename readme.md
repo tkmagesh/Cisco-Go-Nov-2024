@@ -240,3 +240,6 @@ go mod vendor
 ### Package
 - Internal organization of a module
 - typically a folder
+
+## Structs
+- Classes in Go

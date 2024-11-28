@@ -36,6 +36,13 @@ func main() {
 	nos2[0] = 9999
 	fmt.Printf("nos2[0] = %d, nos[0] = %d\n", nos2[0], nos[0])
 
+	// deep copy
+	fmt.Println("deep copy")
+	dupNos := make([]int, len(nos))
+	copy(dupNos, nos)
+	dupNos[0] = 7777
+	fmt.Printf("dupNos[0] = %d, nos[0] = %d\n", dupNos[0], nos[0])
+
 	sort(nos)
 	fmt.Println("len(nos) : ", len(nos))
 	fmt.Println(nos)

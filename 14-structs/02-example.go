@@ -16,11 +16,14 @@ func main() {
 		p.Name = "Pen"
 		p.Cost = 10
 	*/
+	// var p Product = Product{100, "Pen", 10}
+
 	var p Product = Product{
 		Id:   100,
 		Name: "Pen",
 		Cost: 10,
 	}
+
 	// fmt.Println(p)
 	// fmt.Printf("%#v\n", p)
 	fmt.Printf("%+v\n", p)
@@ -35,6 +38,9 @@ func main() {
 	fmt.Println("Before applying 10% discount, p => ", FormatProduct(p))
 	ApplyDiscount(&p, 10)
 	fmt.Println("After applying 10% discount, p => ", FormatProduct(p))
+
+	newPPtr := new(Product)
+	fmt.Println(newPPtr)
 }
 
 func FormatProduct(p Product) string {

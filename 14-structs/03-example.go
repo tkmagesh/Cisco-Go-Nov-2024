@@ -42,6 +42,10 @@ func main() {
 	// Accessing the members
 	// fmt.Println(milk.Product.Id, milk.Product.Name, milk.Product.Cost, milk.Expiry)
 	fmt.Println(milk.Id, milk.Name, milk.Cost, milk.Expiry)
+
+	fmt.Println(FormatProduct(milk.Product))
+	ApplyDiscount(&milk.Product, 10)
+	fmt.Println(FormatProduct(milk.Product))
 }
 
 func FormatProduct(p Product) string {

@@ -178,3 +178,9 @@ GOOS=windows GOARCH=amd64 go build 01-hello-world.go
     - errors.New()
     - fmt.Errorf()
     - custome type implementing the "error" interface
+
+## Panic & Recovery
+- A panic is a state of the application where the application execution cannot proceed in the forward direction
+- functions
+    - panic
+    - recover

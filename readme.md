@@ -162,6 +162,10 @@ GOOS=windows GOARCH=amd64 go build 01-hello-world.go
 
 ### Slice
 - Varying sized typed collection
+- Maintains a pointer to an underlying array
+- functions
+    - len()
+    - append()
 
 ### Map
 - Varying sized typed collection of key/value pairs

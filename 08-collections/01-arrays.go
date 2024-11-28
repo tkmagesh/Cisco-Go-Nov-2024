@@ -33,6 +33,7 @@ func main() {
 	fmt.Printf("nos2[0] = %d, nos[0] = %d\n", nos2[0], nos[0])
 
 	sort(&nos)
+	fmt.Println("len(nos) : ", len(nos))
 	fmt.Println(nos)
 }
 

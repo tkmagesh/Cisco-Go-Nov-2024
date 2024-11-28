@@ -155,3 +155,13 @@ GOOS=windows GOARCH=amd64 go build 01-hello-world.go
         - functions can be assigned to variables
         - functions can be passed as arguments
         - functions can be returned as return values
+
+## Collections
+### Array
+- Fixed sized typed collection
+
+### Slice
+- Varying sized typed collection
+
+### Map
+- Varying sized typed collection of key/value pairs

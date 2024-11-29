@@ -42,7 +42,7 @@
     - No try..catch..finally construct
     - No implicit type conversions
 - Managed Concurrency
-    - lightweight concurrency model (go routines) - 4KB
+    - lightweight concurrency model (goroutines) - 4KB
     - Built in scheduler
     - Concurrency support is built in the language itself
         - "go" keyword, "chan" data type, channel operator (<-), range construct, select-case constructs
@@ -243,3 +243,8 @@ go mod vendor
 
 ## Structs
 - Classes in Go
+
+## Go Concurrency
+### WaitGroup
+- semaphore based counter (has the ability to block the execution of a function)
+- internally maintains a counter and it can block the exeuction of a function until counter becomes 0

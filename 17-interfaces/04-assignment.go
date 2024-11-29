@@ -27,11 +27,20 @@ type Products []Product
 
 // fmt.Stringer interface implementation
 func (products Products) String() string {
+
 	var sb strings.Builder
 	for _, p := range products {
 		sb.WriteString(fmt.Sprintf("%s\n", p))
 	}
 	return sb.String()
+
+	/*
+		var result string
+		for _, p := range products {
+			result += fmt.Sprintf("%s\n", p)
+		}
+		return result
+	*/
 }
 
 // sort.Interface interface implementation

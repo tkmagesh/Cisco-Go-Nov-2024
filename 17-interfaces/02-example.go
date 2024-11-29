@@ -30,30 +30,6 @@ func (r Rectangle) Perimeter() float64 {
 	return 2 * (r.Height + r.Width)
 }
 
-/*
-func PrintArea(x interface{}) {
-	switch val := x.(type) {
-	case Circle:
-		fmt.Println("Area :", val.Area())
-	case Rectangle:
-		fmt.Println("Area :", val.Area())
-	default:
-		fmt.Println("argument must be either Circle or Rectangle")
-	}
-}
-*/
-
-/*
-func PrintArea(x interface{}) {
-	switch val := x.(type) {
-	case interface{ Area() float64 }:
-		fmt.Println("Area :", val.Area())
-	default:
-		fmt.Println("argument must have an area() method")
-	}
-}
-*/
-
 type Square struct {
 	Side float64
 }
@@ -74,18 +50,24 @@ Rectangle = 2 * (h + w)
 Square = 4 * s
 */
 
-func PrintArea(x interface{ Area() float64 }) {
+type AreaFinder interface{ Area() float64 }
+
+func PrintArea(x AreaFinder) {
 	fmt.Println("Area :", x.Area())
 }
 
-func PrintPerimeter(x interface{ Perimeter() float64 }) {
+type PerimeterFinder interface{ Perimeter() float64 }
+
+func PrintPerimeter(x PerimeterFinder) {
 	fmt.Println("Perimeter :", x.Perimeter())
 }
 
-func PrintShape(x interface {
-	interface{ Area() float64 }
-	interface{ Perimeter() float64 }
-}) {
+type ShapeStatsFinder interface {
+	AreaFinder
+	PerimeterFinder
+}
+
+func PrintShape(x ShapeStatsFinder) {
 	PrintArea(x)      // x should be interface{ Area() float64 }
 	PrintPerimeter(x) // x should interface{ Perimeter() float64 }
 }

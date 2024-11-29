@@ -58,6 +58,13 @@ func (s Square) Area() float64 {
 	return s.Side * s.Side
 }
 
+/*
+Implement the Perimeter() method for all the shapes and Print the perimeter using PrintPerimeter() function
+
+Circle = 2 * pi * r
+Rectangle = 2 * (h + w)
+Square = 4 * s
+*/
 func main() {
 	c := Circle{Radius: 12}
 	// fmt.Println("Area :", c.Area())

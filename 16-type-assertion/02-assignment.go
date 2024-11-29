@@ -3,7 +3,10 @@ package main
 /*
 Hint : use strconv.Atoi() to convert integers in string format to int
 */
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
 func main() {
 	fmt.Println(sum(10))                      // => 10
@@ -12,10 +15,17 @@ func main() {
 	fmt.Println(sum())                        //=>0
 }
 
-func sum(nos ...int) int {
+func sum(list ...interface{}) int {
 	var result int
-	for _, no := range nos {
-		result += no
+	for _, item := range list {
+		switch val := item.(type) {
+		case int:
+			result += val
+		case string:
+			if no, err := strconv.Atoi(val); err == nil {
+				result += no
+			}
+		}
 	}
 	return result
 }

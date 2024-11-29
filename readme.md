@@ -256,3 +256,36 @@ go run --race <program.go>
 ```shell
 go build --race <program.go>
 ```
+
+### Communication
+- "Share memory by communicating" strategy
+#### Channel (data type)
+##### Declaration
+```go
+var <var_name> chan <data_type>
+//ex:
+var ch chan int
+```
+##### Initialization
+```go
+<var_name> = make(chan <data_type>)
+// ex:
+ch = make(chan int)
+```
+##### Combine Declaration & Initialization
+```go
+var ch chan int = make(chan int)
+//OR
+var ch = make(chan int)
+//OR
+ch := make(chan int)
+```
+##### Communication through the channel (using <- operation)
+###### Send Operation
+```go
+ch <- 100
+```
+###### Receive Operation
+```go
+data := <- ch
+```

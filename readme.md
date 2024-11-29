@@ -248,3 +248,11 @@ go mod vendor
 ### WaitGroup
 - semaphore based counter (has the ability to block the execution of a function)
 - internally maintains a counter and it can block the exeuction of a function until counter becomes 0
+
+### Data Race
+```shell
+go run --race <program.go>
+```
+```shell
+go build --race <program.go>
+```
